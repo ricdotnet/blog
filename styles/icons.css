@@ -1,0 +1,120 @@
+/* social media icons */
+.facebook {
+    background: url(../../img/facebook.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 4% 5px 0 5px;
+    }
+.facebook:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+.twitter {
+    background: url(../../img/twitter.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 4% 5px 0 5px;
+    }
+.twitter:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+.instagram {
+    background: url(../../img/instagram.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 4% 5px 0 5px;
+    }
+.instagram:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+.youtube {
+    background: url(../../img/youtube.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 4% 5px 0 5px;
+    }
+.youtube:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+.tumblr {
+    background: url(../../img/tumblr.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 4% 5px 0 5px;
+    }
+.tumblr:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+.dribble {
+    background: url(../../img/dribble.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 4% 5px 0 5px;
+    }
+.dribble:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+
+
+.loc {
+    background-image: url(../../img/location.png);
+    background-size: cover;
+    width: 15px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+}

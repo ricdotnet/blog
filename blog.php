@@ -18,6 +18,7 @@
 
         $sql = "SELECT * FROM posts WHERE url='$url'";
         $result = mysqli_query($conn, $sql);
+
         if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
             
@@ -25,6 +26,8 @@
             $getname = "SELECT firstname, lastname FROM users WHERE id=".$row['user'];
             $gotname = mysqli_query($conn, $getname);
             $postername = mysqli_fetch_assoc($gotname);
+            
+            $sqlviews = "UPDATE posts SET views = views+1 WHERE id=".$row['id'];
     
     ?>
 

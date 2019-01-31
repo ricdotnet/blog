@@ -1,10 +1,5 @@
 <?php
 
-//CREATED BY: RICARDO ROCHA
-//CREATED IN: 16TH OF NOVEMBER
-//LAST EDITED IN: 19TH OF NOVEMBER
-//EMAIL: me@rrocha.eu
-
     //start header
     require("header3.php");
     //finish header

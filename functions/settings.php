@@ -1,10 +1,5 @@
 <?php
 
-//CREATED BY: RICARDO ROCHA
-//CREATED IN: 10TH OF NOVEMBER
-//LAST EDITED IN: 16TH OF NOVEMBER
-//EMAIL: me@rrocha.eu
-
 require('mysql.php');
 
     //blog settings

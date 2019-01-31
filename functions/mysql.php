@@ -1,10 +1,5 @@
 <?php
 
-//CREATED BY: RICARDO ROCHA
-//CREATED IN: 16TH OF NOVEMBER
-//LAST EDITED IN: 16TH OF NOVEMBER
-//EMAIL: me@rrocha.eu
-
 $servername = "localhost";
 $username = "root";
 $password = "nH3%bCz_DQhu3.Pw";

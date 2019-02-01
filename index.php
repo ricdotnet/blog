@@ -104,6 +104,8 @@
                 <div class="card-text text-right text-muted float-right"><small>
                     <i class="fas fa-eye"></i> <?=$row['views'] ?>
                     <span class="mr-3"></span>
+                    <i class="fas fa-comments"></i> 5
+                    <span class="mr-3"></span>
                     <i class="fas fa-calendar-alt"></i> <?=$row['date'] ?>
                 </small></div>
             </div>

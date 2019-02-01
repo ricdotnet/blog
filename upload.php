@@ -2,15 +2,16 @@
 session_start();
 if ( isset($_FILES["file"]["type"]) )
 {
-  $max_size = 500 * 1024; // 500 KB
+  $max_size = 5000 * 1024; // 500 KB
   $destination_directory = "images/";
-  $validextensions = array("jpeg", "jpg", "png");
+  $validextensions = array("jpeg", "jpg", "png", "heic");
   $temporary = explode(".", $_FILES["file"]["name"]);
   $file_extension = end($temporary);
   // We need to check for image format and size again, because client-side code can be altered
   if ( (($_FILES["file"]["type"] == "image/png") ||
         ($_FILES["file"]["type"] == "image/jpg") ||
-        ($_FILES["file"]["type"] == "image/jpeg")
+        ($_FILES["file"]["type"] == "image/jpeg") ||
+        ($_FILES["file"]["type"] == "image/heic")
        ) && in_array($file_extension, $validextensions))
   {
     if ( $_FILES["file"]["size"] < ($max_size) )

@@ -5,3 +5,7 @@ bricklayer.on("breakpoint", function (e) {
   console.log(e.detail.columnCount);
 })
 //bricklayer options - homepage
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

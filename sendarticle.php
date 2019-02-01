@@ -15,11 +15,18 @@
         
         $url = str_replace(' ', '-', $url);
         
-        $texthtml = $_POST['content'];
-        preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
-        $cover = $img[1];
+        $cover = $_POST['cover'];
+        if(empty($cover)){
+            $texthtml = $_POST['content'];
+            preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
+            $cover = $img[1];
+        }
+        
+        //$texthtml = $_POST['content'];
+        //preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
+        //$cover = $img[1];
         //preg_match('/<img.+src=[\'"](?P<src>.+)[\'"].*>/i', $texthtml, $image);
-        //$cover = $image['src'];
+        //$cover = $image['src']; 
     
         $sql = "INSERT INTO posts (title, subtitle, user, content, date, cover, url)
         VALUES ('$title', '$subtitle', '$user', '$content', '$date', '$cover', '$url')";

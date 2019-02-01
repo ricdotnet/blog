@@ -17,7 +17,7 @@ function selectImage(e) {
 
 $(document).ready(function (e) {
 
-  var maxsize = 25000 * 1024; // 500 KB
+  var maxsize = 50000 * 1024; // 500 KB
 
   $('#max-size').html((maxsize/1024).toFixed(2));
 
@@ -49,7 +49,7 @@ $(document).ready(function (e) {
     $('#message').empty();
 
     var file = this.files[0];
-    var match = ["image/jpeg", "image/png", "image/jpg"];
+    var match = ["image/jpeg", "image/png", "image/jpg", "image/heic"];
 
     if ( !( (file.type == match[0]) || (file.type == match[1]) || (file.type == match[2]) ) )
     {

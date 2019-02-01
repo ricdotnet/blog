@@ -1,5 +1,10 @@
 <?php
 
+//CREATED BY: RICARDO ROCHA
+//CREATED IN: 16TH OF NOVEMBER
+//LAST EDITED IN: 19TH OF NOVEMBER
+//EMAIL: me@rrocha.eu
+
     //start header
     require("header3.php");
     //finish header
@@ -23,6 +28,7 @@
             $postername = mysqli_fetch_assoc($gotname);
             
             $sqlviews = "UPDATE posts SET views = views+1 WHERE id=".$row['id'];
+            $conn->query($sqlviews);
     
     ?>
 

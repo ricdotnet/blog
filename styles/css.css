@@ -99,9 +99,9 @@ blockquote {
     background: #fff;
 }
 .box {
-  display: flex;
-  margin-bottom: 10px;
-  min-height: 150px;
+    display: flex;
+    margin-bottom: 10px;
+    min-height: 150px;
 }
 
 #cover {

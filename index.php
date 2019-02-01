@@ -1,5 +1,10 @@
 <?php
 
+//CREATED BY: RICARDO ROCHA
+//CREATED IN: 10TH OF NOVEMBER
+//LAST EDITED IN: 31ST OF DECEMBER
+//EMAIL: me@rrocha.eu
+
     //start header
     require("header.php");
     //finish header
@@ -100,8 +105,12 @@
                 <p class="card-text text-justify"><?=$finalcontent?></p>
             </div>
             <div class="card-footer border-0">
-                <div class="card-text text-uppercase text-primary float-left"><small><?=$postername['name']?></small></div>
-                <div class="card-text text-right text-muted float-right"><small><?=$row['date'] ?></small></div>
+                <div class="card-text text-uppercase text-primary float-left"><small><i class="fas fa-user"></i> <?=$postername['name']?></small></div>
+                <div class="card-text text-right text-muted float-right"><small>
+                    <i class="fas fa-eye"></i> <?=$row['views'] ?>
+                    <span class="mr-3"></span>
+                    <i class="fas fa-calendar-alt"></i> <?=$row['date'] ?>
+                </small></div>
             </div>
             
         </div>

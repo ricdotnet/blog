@@ -32,6 +32,11 @@
             
             $name = '$postername[firstname],$postername[lastname]';
             
+            //get number of comments
+            $query = "SELECT * FROM comments WHERE post=".$row['id'];
+            $comments = mysqli_query($conn, $query);
+            $ccount = mysqli_num_rows($comments);
+            
             //date format
             //$date = date("d-m-Y", strtotime($row['date']));
     
@@ -104,7 +109,7 @@
                 <div class="card-text text-right text-muted float-right"><small>
                     <i class="fas fa-eye"></i> <?=$row['views'] ?>
                     <span class="mr-3"></span>
-                    <i class="fas fa-comments"></i> 5
+                    <i class="fas fa-comments"></i> <?=$ccount ?>
                     <span class="mr-3"></span>
                     <i class="fas fa-calendar-alt"></i> <?=$row['date'] ?>
                 </small></div>

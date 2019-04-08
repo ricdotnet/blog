@@ -39,6 +39,8 @@
     <script src="js/trumbowyg.min.js"></script>
     <script src="js/trumbowyg.upload.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/jdenticon@2.1.1" async></script><!-- custom avatar --> 
+
     <script src="js/custom.js"></script><!-- custom javascript -->
     <!-- end javascript -->
 

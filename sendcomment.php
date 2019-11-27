@@ -8,22 +8,11 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         
+        $post = $row['id'];
         
-        
-        $subtitle = $_POST['subtitle'];
-        $user = '1';
         //$date = date("Y-m-d");
-        $content = addslashes($_POST['content']);
+        $content = addslashes($_POST['comment']);
         $date = date("Y-m-d");
-        
-        $url = str_replace(' ', '-', $url);
-        
-        $cover = $_POST['cover'];
-        if(empty($cover)){
-            $texthtml = $_POST['content'];
-            preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
-            $cover = $img[1];
-        }
         
         //$texthtml = $_POST['content'];
         //preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
@@ -31,8 +20,8 @@
         //preg_match('/<img.+src=[\'"](?P<src>.+)[\'"].*>/i', $texthtml, $image);
         //$cover = $image['src']; 
     
-        $sql = "INSERT INTO posts (title, subtitle, user, content, date, cover, url)
-        VALUES ('$title', '$subtitle', '$user', '$content', '$date', '$cover', '$url')";
+        $sql = "INSERT INTO comments (post, content, poster, email, date)
+        VALUES ('$post', '$content', '$name', '$name', '$date')";
         
         if ($conn->query($sql) === TRUE) {
             echo "<div class='container alert alert-success alert-dismissible fade show' role='alert'>
@@ -41,6 +30,7 @@
     <span aria-hidden='true'>&times;</span>
   </button>
 </div>";
+            echo "<meta http-equiv='refresh' content='0'>";
         } else {
             echo "<div class=error>Error: " . $sql . "<br>" . $conn->error ."</div>";
         }

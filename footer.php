@@ -20,7 +20,7 @@
                 <a class="instagram" href="#ig"></a><!-- instagram -->
             </div>
             
-            <div id="madeby" class="text-white">
+            <div id="madeby">
                 Made with <img src="https://www.freeiconspng.com/uploads/heart-png-8.png" width="15px"> in London
             </div>
             

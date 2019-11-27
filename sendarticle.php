@@ -15,12 +15,12 @@
         
         $url = str_replace(' ', '-', $url);
         
-        $cover = $_POST['cover'];
-        if(empty($cover)){
-            $texthtml = $_POST['content'];
-            preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
-            $cover = $img[1];
-        }
+        $cover = $_POST['coverpic'];
+        //if(empty($cover)){
+        //    $texthtml = $_POST['content'];
+        //    preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
+        //    $cover = $img[1];
+        //}
         
         //$texthtml = $_POST['content'];
         //preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $texthtml, $img);
@@ -38,6 +38,7 @@
     <span aria-hidden='true'>&times;</span>
   </button>
 </div>";
+            header("Location: http://rrocha.uk/blog");
         } else {
             echo "<div class=error>Error: " . $sql . "<br>" . $conn->error ."</div>";
         }

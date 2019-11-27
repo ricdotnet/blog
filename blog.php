@@ -11,7 +11,6 @@
     
         $url = $_GET['post']; //get post title
 
-
         //get post info from db
         $sql = "SELECT * FROM posts WHERE url='$url'";
         $result = mysqli_query($conn, $sql);
@@ -30,7 +29,8 @@
     
     ?>
 
-        <div id="cover-post" style="background-image: url(<?=$row['cover']?>);">
+        <!--<div id="cover-post" style="background-image: url(<?=$row['cover']?>);">-->
+        <div id="cover-post">
             <div class="cell-top"></div><!-- to make up space at the top -->
         
             <div class="cell-middle">
@@ -59,12 +59,12 @@
                 while($res = mysqli_fetch_assoc($comments)) { ?>
                     
                 <div class="pl-5 pr-5">
-                    <div class="card">
+                    <!--<div class="card">
                         <div class="card-header"><?=$res['poster']?></div>
                         <div class="card-body"> 
                             <?=$res['content']?>
                         </div>
-                    </div>
+                    </div>-->
                     
                     <div class="media">
                         <svg data-jdenticon-value="<?=$res['poster']?>" width="80" height="80" class="align-self-start mr-3"></svg>
@@ -90,20 +90,26 @@
             <p class="text-center">Have a say please.</p>
             
             
-            <form class="p-4">
+            <form class="p-4" action="" method="post">
                 <div class="form-group">
                     <div class="row">
                         <div class="col">
-                            <input name="name" type="text" class="form-control" placeholder="Name">
+                            <input name="name" type="text" class="form-control" placeholder="Name" required>
                         </div>
                         <div class="col">
-                            <input name="email" type="text" class="form-control" placeholder="Email address">
+                            <input name="email" type="email" class="form-control" placeholder="Email address" required>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea name="comment" class="form-control" id="comment" rows="3"></textarea>
+                    <textarea name="comment" class="form-control" id="comment" rows="3" required></textarea>
                 </div>
+                
+                <div class="form-group">
+                    <button id="button" class="btn btn-secondary" name="postcomment">Send Comment</button>
+                </div>
+                
+                <?php require('sendcomment.php'); ?>
             </form>
             <!-- comment form -->
             

@@ -18,12 +18,15 @@
     <link rel="stylesheet" href="styles/css.css" type="text/css"><!-- main style sheet -->
     <link rel="stylesheet" href="styles/icons.css" type="text/css">
     <link rel="stylesheet" href="styles/bricklayer.css" type="text/css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/medium-editor/5.23.2/css/themes/default.min.css" type="text/css">
 
 </head>
 
 <body>
     
-    <form class="mb-5" id="addblog" action="" method="post"><!-- full container -->
+    <form class="full" id="addblog" action="" method="post"><!-- full container -->
         <div class="top"><!-- nav and form start -->
             <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand h1 mb-0" href="http://rrocha.uk/blog"><?=$name;?></a>
@@ -39,10 +42,9 @@
             <!-- title and subtitle -->
             <input class="input mt-4" name="title" type="text" id="articleTitle" placeholder="Enter article title." required autocomplete="off"><hr>
             <input class="input" name="subtitle" type="text" id="articleSubtitle" placeholder="Enter article subtitle." autocomplete="off"><hr>
-            <input class="input" name="coverpic" type="text" id="coverPic" placeholder="Enter the link for a cover picture." autocomplete="off"><hr>
             <!-- title and subtitle -->
             
-            <textarea name="content"></textarea>
+            <textarea class="textarea" id="textarea" name="content"></textarea>
             <?php require('sendarticle.php'); ?>
         </div>
     </form>
@@ -88,21 +90,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+
+    <script src="js/trumbowyg.min.js"></script>
+    <script src="js/trumbowyg.upload.min.js"></script>
     
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+
     <script src="js/custom.js"></script><!-- custom javascript -->
-    
-    <script src="https://cdn.tiny.cloud/1/913l9i76rwfv41ovshaslvbi5ydzq3re0pkweznb02q4ykdt/tinymce/5/tinymce.min.js"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea',
-            toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright bullist numlist outdent indent image',
-            plugins: 'image',
-            statusbar: false,
-            height: 1000,
-            maxHeight: 1000
-            
-        });
-    </script>
     
     <script src="js/textarea.js"></script><!-- form submit javascript -->
     <script src="js/upload.js"></script>

@@ -6,7 +6,7 @@
 
     //start main content
     
-    //blog posts sql settingsp
+    //blog posts sql settings
 
 ?>
 
@@ -23,7 +23,7 @@
         while($row = mysqli_fetch_assoc($result)) {
             
             //get poster usename
-            $getname = "SELECT name FROM users WHERE id=".$row['user'];
+            $getname = "SELECT username FROM users WHERE id=".$row['user'];
             $gotname = mysqli_query($conn, $getname);
             $postername = mysqli_fetch_assoc($gotname);
             

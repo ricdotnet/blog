@@ -43,7 +43,9 @@
             <!-- title and subtitle -->
             
             <textarea name="content"></textarea>
+
             <?php require('sendarticle.php'); ?>
+
         </div>
     </form>
     

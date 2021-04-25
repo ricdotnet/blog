@@ -29,7 +29,7 @@
         //$cover = $image['src']; 
     
         $sql = "INSERT INTO posts (title, subtitle, user, content, date, cover, url)
-        VALUES ('$title', '$subtitle', '$user', '$content', '$date', '$cover', '$url')";
+        VALUES ('$title', '$subtitle', '1', '$content', '$date', '$cover', '$url')";
         
         if ($conn->query($sql) === TRUE) {
             echo "<div class='container alert alert-success alert-dismissible fade show' role='alert'>

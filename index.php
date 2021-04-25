@@ -6,7 +6,7 @@
 
     //start main content
     
-    //blog posts sql settingsp
+    //blog posts sql settings
 
 ?>
 
@@ -24,9 +24,10 @@
              
         if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            
-            //get poster usename
-            $getname = "SELECT name FROM users WHERE id=".$row['user'];
+
+
+            //get poster username
+            $getname = "SELECT username FROM users WHERE id=".$row['user'];
             $gotname = mysqli_query($conn, $getname) or die(mysql_error());
             $postername = mysqli_fetch_assoc($gotname);
             
@@ -35,60 +36,30 @@
             //get number of comments
             $query = "SELECT * FROM comments WHERE post=".$row['id'];
             $comments = mysqli_query($conn, $query);
-            $ccount = mysqli_num_rows($comments);
-            
+            //$ccount = mysqli_num_rows($comments);
+
+
             //date format
             //$date = date("d-m-Y", strtotime($row['date']));
     
     ?>
-        
-        <!--<div class="card">
+                
+        <?php
 
-            <img class="card-img-top" src="..." alt="Card image cap">
-            
-            <!--<div class="card-header"><h3><a href="blog.php?post=<?=$row['title']?>&id=<?=$row['id']?>" target="_blank"><?=$row['title'] ?></a></h3></div>-->
-            
-            <!--<div id="post-subtitle"><?=$row['subtitle'] ?></div>-->
-            
-            <!-- post content --
-            <div class="card-body">
-                
-                <h4 class="card-title"><a class="text-dark" href="blog.php?post=<?=$row['title']?>&id=<?=$row['id']?>" target="_blank"><?=$row['title'] ?></a></h4>
-            
-            </div>
-            
-            <div class="card-footer">
-                <!-- read more button --
-                <div class="card-text text-left float-left">
-                    <small class="text-muted">
-                        <?php echo '<a href="blog.php?post='.$row['title'].'&id='.$row['id'].'" target="_blank" class="badge badge-light">Read More!</a>'; ?>
-                    </small>
-                </div>
-                
-                <!-- post info --
-                <div class="card-text text-right"><small class="text-muted">Posted by <b><?=$postername['name'] ?></b> in <b><?=$row['date'] ?></b></small></div>--
-            </div>
-            <!-- end post content --
-            
-        </div>
-        </div>-->
-                
-                <?php
-        
-                    $content = $row['content'];
-                    
-                    $finalcontent = strip_tags($content, '<br>');
-            
-                    if (strlen($finalcontent) > 300) {
+            $content = $row['content'];
 
-                    // truncate string
-                    $contentcut = substr($finalcontent, 0, 300);
+            $finalcontent = strip_tags($content, '<br>');
 
-                    // make sure it ends in a word so assassinate doesn't become ass...
-                    $finalcontent = substr($contentcut, 0, strrpos($contentcut, ' '));
-                    } 
-                
-                ?>
+            if (strlen($finalcontent) > 300) {
+
+            // truncate string
+            $contentcut = substr($finalcontent, 0, 300);
+
+            // make sure it ends in a word so assassinate doesn't become ass...
+            $finalcontent = substr($contentcut, 0, strrpos($contentcut, ' '));
+            }
+
+        ?>
         
         <div class="card border-0 box">
             
@@ -105,12 +76,12 @@
                 <p class="card-text text-justify"><?=$finalcontent?></p>
             </div>
             <div class="card-footer border-0">
-                <div class="card-text text-uppercase text-primary float-left"><small><i class="fas fa-user"></i> <?=$postername['name']?></small></div>
+                <div class="card-text text-uppercase text-primary float-left"><small><i class="fas fa-user"></i> <?=$postername['username']?></small></div>
                 <div class="card-text text-right text-muted float-right"><small>
-                    <i class="fas fa-eye"></i> <?=$row['views'] ?>
-                    <span class="mr-3"></span>
-                    <i class="fas fa-comments"></i> <?=$ccount ?>
-                    <span class="mr-3"></span>
+<!--                    <i class="fas fa-eye"></i> --><?//=$row['views'] ?>
+<!--                    <span class="mr-3"></span>-->
+<!--                    <i class="fas fa-comments"></i> --><?//=$ccount ?>
+<!--                    <span class="mr-3"></span>-->
                     <i class="fas fa-calendar-alt"></i> <?=$row['date'] ?>
                 </small></div>
             </div>

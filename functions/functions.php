@@ -5,7 +5,7 @@
 //LAST EDITED IN: 16TH OF NOVEMBER
 //EMAIL: me@rrocha.eu
 
-require('mysql.php');
+require('example.mysql.php');
 
     //blog settings
     $pagetitle = "Ricardo - Forex Trader";

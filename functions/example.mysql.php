@@ -1,15 +1,15 @@
 <?php
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$database = "databasename";
+/* Connect to a MySQL database using driver invocation */
+$dsn = 'mysql:dbname=database;host=localhost';
+$user = 'user';
+$password = 'password';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$dbh = new PDO($dsn, $user, $password);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($dbh->errorCode()) {
+    die("Connection failed: " . $dbh->errorInfo());
 }
+
 ?>

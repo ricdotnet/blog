@@ -3,12 +3,12 @@
 require('mysql.php');
 
     //blog settings
-    $pagetitle = "Ricardo - Forex Trader";
+    $pagetitle = "Ricardo - full stacker";
     $name = "ricardo rocha";
     $shortname = "ricardo";
-    $slogan = "creative mind";
+    $slogan = "full stacker";
 
     //design settings
-    $coverpic = "https://images.unsplash.com/photo-1495420434947-41fd0fbab21f?auto=format&fit=crop&w=2551&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
+    $coverpic = "https://images.unsplash.com/photo-1619274376192-8b1741f73a6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
 ?>

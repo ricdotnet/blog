@@ -19,10 +19,10 @@
 
 <?php
 
-        $sql = "SELECT * FROM posts ORDER BY id DESC";
-        $result = mysqli_query($conn, $sql);
+    $getPosts = $dbh->prepare('select * from posts order by id desc');
+    $getPosts->execute();
              
-        if (mysqli_num_rows($result) > 0) {
+    if ($getPosts->rowCount() > 0) {
         while($row = mysqli_fetch_assoc($result)) {
 
 
@@ -93,8 +93,10 @@
         }
             
         } else {
+
             echo "0 results";
         }
+
     //finish main content
         
         ?>

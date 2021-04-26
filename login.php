@@ -15,7 +15,8 @@ if(isset($_POST['login'])) {
 
         if($query->rowCount() === 1) {
 
-            header("location: http://localhost:9000");
+            $_SESSION['id'] = $query->fetchColumn(0);
+            header("location: " . $url);
 
         } else {
             echo 'invalid details';
@@ -27,7 +28,8 @@ if(isset($_POST['login'])) {
     
 ?>
 
-<div class="w-25 mx-auto my-5">
+<div class="w-25 mx-auto">
+
     <form method="post" name="login">
         <div class="form-group">
             <label for="email">Email address</label>
@@ -39,6 +41,7 @@ if(isset($_POST['login'])) {
         </div>
         <button type="submit" class="btn btn-primary" name="login">Login</button>
     </form>
+
 </div>
 
 <?php

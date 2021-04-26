@@ -8,10 +8,6 @@
 ?>
 
     <div id="footer" class="mt-2">
-        
-        <div class="cell-top"></div><!-- to make up space at the top -->
-        
-        <div class="cell-middle">
             
             <!-- social-->
             <div id="social">

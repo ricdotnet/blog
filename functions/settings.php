@@ -2,6 +2,10 @@
 
 require('mysql.php');
 
+    session_start();
+
+    $url = 'http://ricr.test:9000';
+
     //blog settings
     $pagetitle = "Ricardo - full stacker";
     $name = "ricardo rocha";

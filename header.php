@@ -7,6 +7,11 @@
 
     require("functions/settings.php");
 
+    if(isset($_POST['logout'])) {
+        session_destroy();
+        header('location: ' . $url);
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,10 +51,18 @@
 <!--                    </div>-->
 <!--                </li>-->
             </ul>
-            
-                <span class="nav-item">
-                    <a class="nav-link" href="login.php">Admin Login</a>
-                </span>
+
+            <?php if(!isset($_SESSION['id'])) { ?>
+            <span class="nav-item">
+                <a class="nav-link" href="login.php">Admin Login</a>
+            </span>
+            <?php } else { ?>
+
+                <form method="post" action="">
+                    <button name="logout">LOGOUT</button>
+                </form>
+
+            <?php } ?>
         </div>
     </nav>
 
